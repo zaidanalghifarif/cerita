@@ -4,26 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-window.addEventListener('load', () => {
-	Swal.fire({
-	  title: 'Are you sure to play music in background?',
-	  // text: "You won't be able to revert this!",
-	  icon: 'warning',
-	  showCancelButton: true,
-	  confirmButtonColor: '#3 085d6',
-	  cancelButtonColor: '#d33',
-	  confirmButtonText: 'Yes',
-	  cancelButtonText: 'No',
-	}).then((result) => {
-	  if (result.isConfirmed) {
-		document.querySelector('.song').play();
-		resolveFetch().then(animationTimeline());
-	  } else {
-		resolveFetch().then(animationTimeline());
-	  }
-	})
-  })
-
 (function($) {
 
 	var	$window = $(window),
